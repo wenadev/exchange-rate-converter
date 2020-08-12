@@ -6,4 +6,4 @@ This live exchange rate has two converters:
 
 The menu components in the webpage are inactive as they were included primarily for aesthetics.
 
-This [converter](https://wenadev.github.io/exchange-rate-converter/) was built alongside two active collaborators as the first project task to continue in the WeJapa Internship 2020 organized by Favour Ori (https://github.com/favourori)
+This [converter](https://wenadev.github.io/exchange-rate-converter/) was built alongside two active collaborators as the first project task to progress in the WeJapa Internship 2020 organized by [Favour Ori](https://github.com/favourori)
