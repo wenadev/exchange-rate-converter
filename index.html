@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Exchange Rate Converter</title>
+    
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="header">
+            <div class="menuBar">
+                <div class="menu"></div>
+                <div class="menu"></div>
+                <div class="menuShorter"></div>
+            </div>
+
+            <div id="button">
+                <button>View Report</button>
+            </div>
+        </div>
+
+        <div class="exchangeFunction">
+            <div class="title">
+                
+                <!-- element holding current date and time-->
+                <p id="t1"></p>
+                
+                <h3>Live Exchange Rate Converter</h3>
+                <h4>From USD Currency</h4>
+            </div>
+            
+             <!-- div holding the select elements and arrows -->
+            <div class="converter">
+
+                 <!-- country flag relevant to selected currency code -->
+                <div id="fromCurrImage"><img id="fromImage" src="https://www.countryflags.io/us/flat/32.png" >
+                    
+                    <!-- select element containing currencies to be converted from-->
+                    <select id="fromCurrency">
+                        
+                        <!-- currency code starting with U -->
+                        <option fromSrc="https://www.countryflags.io/us/flat/32.png" fromCur="&#x24;" value="USD">USD (U.S. dollar)</option>
+                        
+                    </select>
+                </div>
+
+                <div class="arrows">
+                    <p id="rotateArrow">&#10148;</p>
+                    <p>&#10148;</p>
+                </div>
+
+                <!-- country flag relevant to selected currency code -->
+                <div id="toCurrImage"><img id="toImage" src="https://www.countryflags.io/ng/flat/32.png">
+
+                    <!-- select element containing currencies to be converted to-->
+                    <select id="toCurrency">
+
+                        <!-- currency codes starting with A -->
+                        <option toSrc="https://www.countryflags.io/ae/flat/32.png" toCur="د.إ" value="AED">AED (UAE Dirham)</option>
+                        <option toSrc="https://www.countryflags.io/af/flat/32.png" toCur="&#x60b;" value="AFN">AFN (Afghan Afghani)</option>
+                        <option toSrc="https://www.countryflags.io/al/flat/32.png" toCur="&#76;&#101;&#107;" value="ALL">ALL (Albanian Lek)</option>
+                        <option toSrc="https://www.countryflags.io/am/flat/32.png" toCur="&#1423;" value="AMD">AMD (Armanian Dram)</option>
+                        <option toSrc="https://www.countryflags.io/an/flat/32.png" toCur="&#402;" value="ANG">ANG (Neth Antilles Guilder)</option>
+                        <option toSrc="https://www.countryflags.io/ao/flat/32.png" toCur="Kz" value="AOA">AOA (Angolan Kwanza)</option>
+                        <option toSrc="https://www.countryflags.io/ar/flat/32.png" toCur="&#36;" value="ARS">ARS  (Argentine Peso)</option>
+                        <option toSrc="https://www.countryflags.io/au/flat/32.png" toCur="&#x24;" value="AUD">AUD (Australian Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/aw/flat/32.png" toCur="&#402;" value="AWD">AWG (Aruba Florin)</option>
+                        <option toSrc="https://www.countryflags.io/az/flat/32.png" toCur="&#x20BC;" value="AZN">AZN (Azerbaijani New Manat)</option>
+
+                        <!-- currency codes starting with B -->
+                        <option toSrc="https://www.countryflags.io/ba/flat/32.png" toCur="&#75;&#77;" value="BAM">BAM (Bosanian Convertible Marka)</option>
+                        <option toSrc="https://www.countryflags.io/bb/flat/32.png" toCur="&#36;" value="BBD">BBD (Barbados Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/bd/flat/32.png" toCur="&#x9F3;" value="BDT">BDT (Bangladesh Taka)</option>
+                        <option toSrc="https://www.countryflags.io/bg/flat/32.png" toCur="лв" value="BGN">BGN (Bulgarian Lev)</option>
+                        <option toSrc="https://www.countryflags.io/bh/flat/32.png" toCur=".د.ب" value="BHD">BHD (Bahraini Dinar)</option>
+                        <option toSrc="https://www.countryflags.io/bi/flat/32.png" toCur="&#x20B5;" value="BIF">BIF (Burundi Franc)</option>
+                        <option toSrc="https://www.countryflags.io/bm/flat/32.png" toCur="&#x24;" value="BMD">BMD  (Bermuda Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/bn/flat/32.png" toCur="&#36;" value="BND">BND (Brunei Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/bo/flat/32.png" toCur="Bs" value="BOB">BOB (Bolivian Boliviano)</option>
+                        <option toSrc="https://www.countryflags.io/br/flat/32.png" toCur="R$" value="BRL">BRL (Brazilian Real)</option>
+                        <option toSrc="https://www.countryflags.io/bs/flat/32.png" toCur="&#36;" value="BSD">BSD (Bahamian Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/bt/flat/32.png" toCur="Nu" value="BTN">BTN (Bhutan Ngultrum)</option>
+                        <option toSrc="https://www.countryflags.io/bw/flat/32.png" toCur="&#80;" value="BWP">BWP (Botswana Pula)</option>
+                        <option toSrc="https://www.countryflags.io/by/flat/32.png" toCur="&#66;&#114;" value="BYN">BYN (New Belarusian Ruble)</option>
+                        <option toSrc="https://www.countryflags.io/bz/flat/32.png" toCur="&#66;&#90;&#36;" value="BZD">BZD (Belize Dollar)</option>
+
+                        <!-- currency codes starting with C -->
+                        <option toSrc="https://www.countryflags.io/ca/flat/32.png" toCur="&#x24;" value="CAD">CAD (Canadian Dollar)</option>
+                        <option fromSrc="https://www.countryflags.io/cg/flat/32.png" fromCur="FC" value="CDF">CDF (Congolese Franc)</option>
+                        <option toSrc="https://www.countryflags.io/ch/flat/32.png" toCur="CHf" value="CHF">CHF (Swiss Franc)</option>
+                        <option toSrc="https://www.countryflags.io/cl/flat/32.png" toCur="  &#36;" value="CLP">CLP (Chilean Peso)</option>
+                        <option toSrc="https://www.countryflags.io/cn/flat/32.png" toCur="&#165;" value="CNY">CNY (Chinese Yuan)</option>
+                        <option toSrc="https://www.countryflags.io/co/flat/32.png" toCur="  &#36;" value="COP">COP (Colombian Peso)</option>
+                        <option toSrc="https://www.countryflags.io/cr/flat/32.png" toCur="&#8353;" value="CRC">CRC (Costa Rica Colon)</option>
+                        <option toSrc="https://www.countryflags.io/cu/flat/32.png" toCur="&#8369;" value="CUP">CUP (Cupan Peso)</option>
+                        <option toSrc="https://www.countryflags.io/cv/flat/32.png" toCur="Esc" value="CVE">CVE (Cape Verde Escudo)</option>
+                        <option toSrc="https://www.countryflags.io/cz/flat/32.png" toCur="Kč" value="&#75;&#269;">CZK (Czeck Koruna)</option>
+
+                        <!-- currency codes starting with D -->
+                        <option toSrc="https://www.countryflags.io/dj/flat/32.png" toCur="Fdj" value="DJF">DJF (Diibouti Franc)</option>
+                        <option toSrc="https://www.countryflags.io/dk/flat/32.png" toCur="kr" value="DKK">DKK (Danish Krone)</option>
+                        <option toSrc="https://www.countryflags.io/do/flat/32.png" toCur="&#82;&#68;&#36;" value="DOP">DOP (Dominician Peso)</option>
+                        <option toSrc="https://www.countryflags.io/dz/flat/32.png" toCur="د.ج" value="DZD">DZD (Algerian Dinar)</option>
+
+                        <!-- currency codes starting with E -->
+                        <option toSrc="https://www.countryflags.io/eg/flat/32.png" toCur="&#163;" value="EGP">EGP (Egyptian Pound)</option>
+                        <option toSrc="https://www.countryflags.io/er/flat/32.png" toCur="Nfa" value="ERN">ERN (Eritrean Nakfa)</option>
+                        <option toSrc="https://www.countryflags.io/et/flat/32.png" toCur="Br" value="ETB">ETB (Ethiopan Biar)</option>
+                        <option toSrc="https://www.countryflags.io/eu/flat/32.png" toCur="&#x20AC;" value="EUR">EUR (Euro)</option>
+
+                        <!-- currency codes starting with F -->
+                        <option toSrc="https://www.countryflags.io/fj/flat/32.png" toCur="&#36;" value="FJD">FJD (Fijian Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/fk/flat/32.png" toCur="&#163;" value="FKP">FKP (Falkland Islands Pound)</option>
+
+                        <!-- currency codes starting with G -->
+                        <option toSrc="https://www.countryflags.io/gb/flat/32.png" toCur="&#xA3;" value="GBP">GBP (British Pound)</option>
+                        <option toSrc="https://www.countryflags.io/ge/flat/32.png" toCur="&#x20BE;" value="GEL">GEL (Georgian Lari)</option>
+                        <option toSrc="https://www.countryflags.io/gh/flat/32.png" toCur="&#x20B5;" value="GHS">GHS (Ghanian Cedi)</option>
+                        <option toSrc="https://www.countryflags.io/gi/flat/32.png" toCur="&#163;" value="GIP">GIP (Gibratar Pound)</option>
+                        <option toSrc="https://www.countryflags.io/gm/flat/32.png" toCur="D" value="GMD">GMD (Gambain Dalasi)</option>
+                        <option toSrc="https://www.countryflags.io/gn/flat/32.png" toCur="GFr" value="GNF">GNF (Guinea Franc)</option>
+                        <option toSrc="https://www.countryflags.io/gt/flat/32.png" toCur="&#81;" value="GTQ">GTQ (Guataemala Quetzal)</option>
+                        <option toSrc="https://www.countryflags.io/gy/flat/32.png" toCur="GY$" value="GYD">GYD (Guyana Dollar)</option>
+
+                        <!-- currency codes starting with H -->
+                        <option toSrc="https://www.countryflags.io/hk/flat/32.png" toCur="HK$" value="HKD">HKD (Hong Kong Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/hn/flat/32.png" toCur="&#x24;" value="HNL">HNL (Honduras Lempira)</option>
+                        <option toSrc="https://www.countryflags.io/hr/flat/32.png" toCur="kn" value="HRK">HRK (Crotain Kuna)</option>
+                        <option toSrc="https://www.countryflags.io/ht/flat/32.png" toCur="&#xa3;" value="HTG">HTG (Haiti Gourde)</option>
+                        <option toSrc="https://www.countryflags.io/hu/flat/32.png" toCur="ft" value="HUF">HUF (Hugarian Forint)</option>
+
+                        <!-- currency codes starting with I -->
+                        <option toSrc="https://www.countryflags.io/id/flat/32.png" toCur="Rp" value="IDR">IDR (Indonesian Rupiah)</option>
+                        <option toSrc="https://www.countryflags.io/il/flat/32.png" toCur="&#x20AA;" value="ILS">ILS (Isreal Shekel)</option>
+                        <option toSrc="https://www.countryflags.io/in/flat/32.png" toCur="&#x20B9;" value="INR">INR (Indian Rupee)</option>
+                        <option toSrc="https://www.countryflags.io/iq/flat/32.png" toCur="&#xa3;" value="IQD">IQD (Iraqi Dinar)</option>
+                        <option toSrc="https://www.countryflags.io/ir/flat/32.png" toCur="&#xa3;" value="IRR">IRR (Iranian Rial)</option>
+                        <option toSrc="https://www.countryflags.io/is/flat/32.png" toCur="&#xa3;" value="ISK">ISK (Iceland Krona)</option>
+
+                        <!-- currency codes starting with J -->
+                        <option toSrc="https://www.countryflags.io/jm/flat/32.png" toCur="&#xa3;" value="JMD">JMD (Jamaican Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/jo/flat/32.png" toCur="&#xa3;" value="JOD">JOD (Joardian Dinar)</option>
+                        <option toSrc="https://www.countryflags.io/jp/flat/32.png" toCur="&#xa5;" value="JPY">JPY (japanese Yen)</option>
+
+                        <!-- currency codes starting with K -->
+                        <option toSrc="https://www.countryflags.io/ke/flat/32.png" toCur="Ksh" value="KES">KES (Kenyan Shilling)</option>
+                        <option toSrc="https://www.countryflags.io/kg/flat/32.png" toCur="Лв" value="KGS">KGS (Kyrgyzstani Som)</option>
+                        <option toSrc="https://www.countryflags.io/kh/flat/32.png" toCur="&#6107;" value="KHR">KHR (Cambodia Riel)</option>
+                        <option toSrc="https://www.countryflags.io/km/flat/32.png" toCur="CF" value="KMF">KMF (Comoros Franc)</option>
+                        <option toSrc="https://www.countryflags.io/kp/flat/32.png" toCur="&#8361;" value="KPW">KPW (North Korean Won)</option>
+                        <option toSrc="https://www.countryflags.io/kw/flat/32.png" toCur="د.ك" value="KWD">KWD (Kuwaiti Dinar)</option>
+                        <option toSrc="https://www.countryflags.io/ky/flat/32.png" toCur="  &#36;" value="KYD">KYD (Cayman Islands Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/kz/flat/32.png" toCur="&#8376;" value="KZT">KZT (Kazakhstan Tenge)</option>
+
+                        <!-- currency codes starting with L -->
+                        <option toSrc="https://www.countryflags.io/la/flat/32.png" toCur="&#xa3;" value="LAK">LAK (Lao Kip)</option>
+                        <option toSrc="https://www.countryflags.io/lb/flat/32.png" toCur="&#xa3;" value="LBP">LBP (Lebanese Pound)</option>
+                        <option toSrc="https://www.countryflags.io/lk/flat/32.png" toCur="Rs" value="LKR">LKR (Sri Lanka Rupee)</option>
+                        <option toSrc="https://www.countryflags.io/lr/flat/32.png" toCur="&#xa3;" value="LRD">LRD (Liberian Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/ls/flat/32.png" toCur="&#xa3;" value="LSL">LSL (Lesotho Loti)</option>
+                        <option toSrc="https://www.countryflags.io/ly/flat/32.png" toCur="&#xa3;" value="LYD">LYD (Libyan Dinar)</option>
+
+                        <!-- currency codes starting with M -->
+                       <option toSrc="https://www.countryflags.io/ma/flat/32.png" toCur=".د.م" value="MAD">MAD (Morrocan Dirham)</option>
+                        <option toSrc="https://www.countryflags.io/md/flat/32.png" toCur="L" value="MDL">MDL (Moldovan Leu)</option>
+                        <option toSrc="https://www.countryflags.io/mg/flat/32.png" toCur="Ar" value="MGA">MGA (Malagasy Ariary)</option>
+                        <option toSrc="https://www.countryflags.io/mk/flat/32.png" toCur="ден" value="MKD">MKD (Macadonian Denar)</option>
+                        <option toSrc="https://www.countryflags.io/mm/flat/32.png" toCur="K" value="MMK">MMK (Myanmar Kyat)</option>
+                        <option toSrc="https://www.countryflags.io/mn/flat/32.png" toCur="&#8366;" value="MNT">MNT (Mongolian Tugrik)</option>
+                        <option toSrc="https://www.countryflags.io/mo/flat/32.png" toCur="P" value="MOP">MOP (Macau Pataca)</option>
+                        <option toSrc="https://www.countryflags.io/mr/flat/32.png" toCur="UM" value="MRO">MRO (Mauritania Ougulya)</option>
+                        <option toSrc="https://www.countryflags.io/mu/flat/32.png" toCur="Ɍs" value="MUR">MUR (Mauritius Rupee)</option>
+                        <option toSrc="https://www.countryflags.io/mv/flat/32.png" toCur="Rf" value="MVR">MVR (Maldives Rufiyaa)</option>
+                        <option toSrc="https://www.countryflags.io/mw/flat/32.png" toCur="MK" value="MWK">MWK (Malawi Kwacha)</option>
+                        <option toSrc="https://www.countryflags.io/mx/flat/32.png" toCur="&#x24;" value="MXN">MXN (Mexican Peso)</option>
+                        <option toSrc="https://www.countryflags.io/my/flat/32.png" toCur="RM" value="MYR">MYR (Mlaysian Ringgit)</option>
+                        <option toSrc="https://www.countryflags.io/mz/flat/32.png" toCur="MT" value="MZN">MZN (Mozambican Metical)</option>
+
+                        <!-- currency codes starting with N -->
+                        <option toSrc="https://www.countryflags.io/na/flat/32.png" toCur="N$" value="NAD">NAD (Namibian Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/ng/flat/32.png" toCur="&#x20A6;" value="NGN" selected>NGN (Nigerian Naira)</option>
+                        <option toSrc="https://www.countryflags.io/ni/flat/32.png" toCur="C$" value="NIO">NIO (Nicaragua Cordoba)</option>
+                        <option toSrc="https://www.countryflags.io/no/flat/32.png" toCur="kr" value="NOK">NOK (Norwegian Krone)</option>
+                        <option toSrc="https://www.countryflags.io/np/flat/32.png" toCur="NɌs" value="NPR">NPR (Nepalese Rupee)</option>
+                        <option toSrc="https://www.countryflags.io/nz/flat/32.png" toCur="NZ$" value="NZD">NZD (New Zealand Dollar)</option>
+
+                        <!-- currency codes starting with O -->
+                        <option toSrc="https://www.countryflags.io/om/flat/32.png" toCur="ر.ع." value="OMR">OMR (Ormani Rial)</option>
+
+                        <!-- currency codes starting with P -->
+                        <option toSrc="https://www.countryflags.io/pa/flat/32.png" toCur="B/." value="PAB">PAB (Panama Balboa)</option>
+                        <option toSrc="https://www.countryflags.io/pe/flat/32.png" toCur="S/." value="PEN">PEN (Peruvian Nuevo Sol)</option>
+                        <option toSrc="https://www.countryflags.io/pg/flat/32.png" toCur="K" value="PGK">PGK (Papua New Guinea Kina)</option>
+                        <option toSrc="https://www.countryflags.io/ph/flat/32.png" toCur="₱" value="PHP">PHP (Philippine Peso)</option>
+                        <option toSrc="https://www.countryflags.io/pk/flat/32.png" toCur="Rs" value="PKR">PKR (Pakisitani Rupee)</option>
+                        <option toSrc="https://www.countryflags.io/pl/flat/32.png" toCur="zł" value="PLN">PLN (Polish Zloty)</option>
+                        <option toSrc="https://www.countryflags.io/py/flat/32.png" toCur="&#8370;" value="PYG">PYG (Paraguayan Gurani)</option>
+
+
+                        <!-- currency codes starting with Q -->
+                        <option toSrc="https://www.countryflags.io/qa/flat/32.png" toCur="ر.ق" value="QAR">QAR (Qatar Rial)</option>
+
+                        <!-- currency codes starting with R -->
+                        <option toSrc="https://www.countryflags.io/ro/flat/32.png" toCur="lei" value="RON">RON (New Romanian Leu)</option>
+                        <option toSrc="https://www.countryflags.io/rs/flat/32.png" toCur="Дин" value="RSD">RSD (Serbian Dinar)</option>
+                        <option toSrc="https://www.countryflags.io/ru/flat/32.png" toCur="&#x20BD;" value="RUB">RUB (Russian Rouble)</option>
+                        <option toSrc="https://www.countryflags.io/rw/flat/32.png" toCur="RF" value="RWF">RWF (Rwandan Franc)</option>
+
+                        <!-- currency codes starting with S -->
+                        <option toSrc="https://www.countryflags.io/sa/flat/32.png" toCur="ر.س" value="SAR">SAR (Saudi Arabian Riyal)</option>
+                        <option toSrc="https://www.countryflags.io/sb/flat/32.png" toCur="SI$" value="SBD">SBD (Solomon Islnads dolllar)</option>
+                        <option toSrc="https://www.countryflags.io/sd/flat/32.png" toCur="Ɍs" value="SCR">SCR (Seychelles Rupee)</option>
+                        <option toSrc="https://www.countryflags.io/sd/flat/32.png" toCur="£Sd" value="SDG">SDG (Sudanese Pound)</option>
+                        <option toSrc="https://www.countryflags.io/se/flat/32.png" toCur="kr" value="SEK">SEK (Swedish Krona)</option>
+                        <option toSrc="https://www.countryflags.io/sg/flat/32.png" toCur="S$" value="SGD">SGD (Singapore Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/sh/flat/32.png" toCur="&#163;" value="SHP">SHP (St Helena Pound)</option>
+                        <option toSrc="https://www.countryflags.io/sl/flat/32.png" toCur="Le" value="SLL">SLL (Sierra Leone Leone)</option>
+                        <option toSrc="https://www.countryflags.io/so/flat/32.png" toCur="So" value="SOS">SOS (Somali Shilling)</option>
+                        <option toSrc="https://www.countryflags.io/sr/flat/32.png" toCur="&#36;" value="SRD">SRD (Surinamese Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/st/flat/32.png" toCur="Db" value="STD">STD (Sao Tome Dobra)</option>
+                        <option toSrc="https://www.countryflags.io/sv/flat/32.png" toCur="&#8353;" value="SVC">SVC (El Salvador Colon)</option>
+                        <option toSrc="https://www.countryflags.io/sy/flat/32.png" toCur="S£" value="SYP">SYP (Syrian Pound)</option>
+                        <option toSrc="https://www.countryflags.io/sz/flat/32.png" toCur="L" value="SZL">SZL (Swaziland Lilageni)</option>
+
+                        <!-- currency codes starting with T -->
+                        <option toSrc="https://www.countryflags.io/th/flat/32.png" toCur="&#3647;" value="THB">THB (Thai Baht)</option>
+                        <option toSrc="https://www.countryflags.io/tj/flat/32.png" toCur="SM" value="TJS">TJS (Tajkistani Somoni)</option>
+                        <option toSrc="https://www.countryflags.io/tm/flat/32.png" toCur="m" value="TMT">TMT (Turkemnaistani Manat)</option>
+                        <option toSrc="https://www.countryflags.io/tn/flat/32.png" toCur="د.ت" value="TND">TND (Tunisian Dinar)</option>
+                        <option toSrc="https://www.countryflags.io/to/flat/32.png" toCur="T$" value="TOP">TOP (Tonga Pa'anga)</option>
+                        <option toSrc="https://www.countryflags.io/tr/flat/32.png" toCur="TL" value="TRY">TRY (Turkey Lira)</option>
+                        <option toSrc="https://www.countryflags.io/tt/flat/32.png" toCur="TT$" value="TTD">TTD (Trinidad Tobago Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/tw/flat/32.png" toCur="NT$" value="TWD">TWD (Taiwan Dollar)</option>
+                        <option toSrc="https://www.countryflags.io/tz/flat/32.png" toCur="TSh" value="TZS">TZS (Tanzanian Shilling)</option>
+
+                        <!-- currency codes starting with U -->
+                        <option toSrc="https://www.countryflags.io/ua/flat/32.png" toCur="&#8372;" value="UAH">UAH (Ukraine Hryvania)</option>
+                        <option toSrc="https://www.countryflags.io/ug/flat/32.png" toCur="USh" value="UGX">UGX (Ugandan Shilling)</option>
+                        <option toSrc="https://www.countryflags.io/us/flat/32.png" toCur="&#x24;" value="USD">USD (U.S. dollar)</option>
+                        <option toSrc="https://www.countryflags.io/uy/flat/32.png" toCur="$U" value="UYU">UYU (Uruguayan New Peso)</option>
+                        <option toSrc="https://www.countryflags.io/uz/flat/32.png" toCur="лв" value="UZS">UZS (Uzebkistani Som)</option>
+
+                        <!-- currency codes starting with V -->
+                        <option toSrc="https://www.countryflags.io/ve/flat/32.png" toCur="Bs" value="VEF">VEF (VeneZuuelan Bolivar)</option>
+                        <option toSrc="https://www.countryflags.io/vn/flat/32.png" toCur="&#8363;" value="VND">VND (Vetnam Dong)</option>
+                        <option toSrc="https://www.countryflags.io/vu/flat/32.png" toCur="VT" value="VUV">VUV (Vanuatu Vatu)</option>
+
+                        <!-- currency codes starting with W -->
+                        <option toSrc="https://www.countryflags.io/ws/flat/32.png" toCur="T" value="WST">WST (Samoa Tala)</option>
+
+                        <!-- currency codes starting with Y -->
+                        <option toSrc="https://www.countryflags.io/ye/flat/32.png" toCur="&#65020;" value="YER">YER (Yemen Riyal)</option>
+
+                        <!-- currency codes starting with Z -->
+                        <option toSrc="https://www.countryflags.io/za/flat/32.png" toCur="R" value="ZAR">ZAR (South African Rand)</option>
+                        <option toSrc="https://www.countryflags.io/zm/flat/32.png" toCur="Z$" value="ZMW">ZMW (Zambian Kwacha)</option>
+                        <option toSrc="https://www.countryflags.io/zw/flat/32.png" toCur="Z$" value="ZML">ZML (Zimbababwe dollar)</option>
+                     </select>
+                </div>
+           </div>
+
+            <!-- div holding the currency symbols and input elements-->
+            <div class="inputs">
+                <form>
+                    
+                    <!-- currency symbol and amount to be converted from -->
+                    <div><p id="changeFromCur">&#x24</p><input type="number" id="convertFrom" required placeholder="From" value="1"></div>
+
+                    <!-- currency symbol and amount to be converted to -->
+                    <div><p id="changeToCur">&#x20A6;</p><input type="number" id="convertTo" required placeholder="To"></div>
+
+                    <!-- reset button-->
+                    <button id="reset" type="reset" value="Reset">Reset</button>
+                </form>
+            </div>
+
+            <p class="link">To convert from multiple currencies,<br/> <a href="multcurrencies.html">click here</a></p>
+        </div>
+    </div>
+</div>
+
+    <!-- custom script file -->
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
